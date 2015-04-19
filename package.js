@@ -8,8 +8,12 @@ Package.describe({
 Package.onUse(function(api) {
   api.versionsFrom("1.0.1");
   api.use(["meteor"]);
+  api.use('fourseven:scss', 'client');
 
   api.addFiles([
+	'reveal.js/css/theme/template/mixins.scss',
+	'reveal.js/css/theme/template/settings.scss',
+	'reveal.js/css/theme/template/theme.scss',
 	'reveal.js/css/theme/beige.css',
 	'reveal.js/css/theme/black.css',
 	'reveal.js/css/theme/blood.css',
@@ -43,6 +47,7 @@ Package.onUse(function(api) {
 
   api.addFiles([
 	'reveal.js/js/reveal.js',
+	'reveal.js/css/reveal.scss',
 	'reveal.js/css/reveal.css'
   ], 'client');
 
