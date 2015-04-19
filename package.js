@@ -8,14 +8,9 @@ Package.describe({
 Package.onUse(function(api) {
   api.versionsFrom("1.0.1");
   api.use(["meteor"]);
-  api.use('fourseven:scss', 'client');
 
   api.addFiles([
-	'reveal.js/css/theme/template/mixins.scss',
-	'reveal.js/css/theme/template/settings.scss',
-	'reveal.js/css/theme/template/theme.scss',
 	'reveal.js/css/theme/beige.css',
-	'reveal.js/css/theme/black.css',
 	'reveal.js/css/theme/blood.css',
 	'reveal.js/css/theme/league.css',
 	'reveal.js/css/theme/moon.css',
@@ -25,8 +20,6 @@ Package.onUse(function(api) {
 	'reveal.js/css/theme/sky.css',
 	'reveal.js/css/theme/solarized.css',
 	'reveal.js/css/theme/white.css',
-	'reveal.js/lib/css/zenburn.css',
-	'reveal.js/lib/font/league-gothic/league-gothic.css',
 	'reveal.js/lib/font/league-gothic/league-gothic.eot',
 	'reveal.js/lib/font/league-gothic/league-gothic.ttf',
 	'reveal.js/lib/font/league-gothic/league-gothic.woff',
@@ -41,14 +34,16 @@ Package.onUse(function(api) {
     'reveal.js/lib/font/source-sans-pro/source-sans-pro-semibold.woff',
     'reveal.js/lib/font/source-sans-pro/source-sans-pro-semibolditalic.eot',
     'reveal.js/lib/font/source-sans-pro/source-sans-pro-semibolditalic.ttf',
-    'reveal.js/lib/font/source-sans-pro/source-sans-pro-semibolditalic.woff',
-    'reveal.js/lib/font/source-sans-pro/source-sans-pro.css'
+    'reveal.js/lib/font/source-sans-pro/source-sans-pro-semibolditalic.woff'
   ], 'client', { isAsset: true });
 
   api.addFiles([
-	'reveal.js/js/reveal.js',
-	'reveal.js/css/reveal.scss',
-	'reveal.js/css/reveal.css'
+	'reveal.js/lib/css/zenburn.css',
+	'reveal.js/css/reveal.css',
+	'reveal.js/css/theme/black.css',
+	'reveal.js/lib/font/league-gothic/league-gothic.css',
+    'reveal.js/lib/font/source-sans-pro/source-sans-pro.css',
+	'reveal.js/js/reveal.js'
   ], 'client');
 
   api.export('Reveal', 'client');
